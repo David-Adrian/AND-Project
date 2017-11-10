@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:maxHeight="1080dp"
+    android:maxWidth="720dp"
+    tools:context="com.example.andproject.MenuMain">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="389dp"
+        android:layout_height="56dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="#FF4400"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="52dp"
+        android:layout_height="55dp"
+        android:adjustViewBounds="false"
+        android:background="#FF4400"
+        android:tint="#FFFFFF"
+        app:srcCompat="?attr/actionModeCloseDrawable"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <FrameLayout
+        android:id="@+id/frameLayoutProfile"
+        android:layout_width="360dp"
+        android:layout_height="167dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:clickable="true"
+        android:focusable="true"
+
+        app:layout_constraintBottom_toTopOf="@+id/frameLayoutMap"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <com.andexert.library.RippleView
+            android:id="@+id/more"
+            rv_centered="true"
+            android:layout_width="360dp"
+            android:layout_height="155dp"
+            android:layout_toLeftOf="@+id/more2">
+
+            <Button
+                android:id="@+id/profile_button"
+                android:layout_width="360dp"
+                android:layout_height="155dp"
+                android:layout_gravity="center"
+                android:background="@drawable/profile"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0" />
+        </com.andexert.library.RippleView>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frameLayoutMap"
+        android:layout_width="360dp"
+        android:layout_height="167dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="8dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintBottom_toTopOf="@+id/frameLayoutSong"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayoutProfile">
+
+        <Button
+            android:id="@+id/map_button"
+            android:layout_width="360dp"
+            android:layout_height="155dp"
+            android:layout_gravity="center"
+            android:background="@drawable/goal_map"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button8" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frameLayoutSong"
+        android:layout_width="360dp"
+        android:layout_height="167dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="8dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayoutMap">
+
+        <Button
+
+            android:id="@+id/playlist_button"
+            android:layout_width="360dp"
+            android:layout_height="155dp"
+            android:layout_gravity="center"
+            android:background="@drawable/playlist"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="42dp" />
+    </FrameLayout>
+
+</android.support.constraint.ConstraintLayout>
