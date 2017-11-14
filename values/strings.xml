@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AND project</string>
+    <string name="settings_name">Log out</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+
+</resources>
